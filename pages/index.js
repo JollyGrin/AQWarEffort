@@ -3,6 +3,8 @@ import { getData } from '../assets/js/gson';
 import Layout from '../components/Layout';
 import Table from '../assets/js/TableClass';
 import Hero from '../components/Hero';
+import Ally from '../components/Ally';
+import Horde from '../components/Horde';
 
 export default function Index({ gson, preview }) {
   const table = {
@@ -21,11 +23,11 @@ export default function Index({ gson, preview }) {
       <Hero />
       <section id='section-table'>
         <div id='table'>
-          <div id='table-ally'>
-            <span>hi</span>
+          <div id='table-ally' className='tab'>
+            <Ally table={table.ally} />
           </div>
-          <div id='table-horde'>
-            <span>hi</span>
+          <div id='table-horde' className='tab'>
+            <Horde table={table.horde} />
           </div>
         </div>
       </section>

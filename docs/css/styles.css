@@ -36,6 +36,22 @@ body {
     border-radius: 0.5em;
     padding: 1em; }
 
+.item {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  align-items: center;
+  padding-bottom: 0.5em; }
+  .item .meter {
+    background-color: grey;
+    border-radius: 0.5em;
+    height: 80%; }
+    .item .meter .progress {
+      display: block;
+      height: 100%;
+      background-color: green;
+      border-radius: 0.5em;
+      width: 24%; }
+
 @media screen and (min-width: 700px) {
   #table {
     grid-template-columns: 1fr 1fr; } }
