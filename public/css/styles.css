@@ -38,19 +38,29 @@ body {
 
 .item {
   display: grid;
-  grid-template-columns: 2fr 8fr;
+  grid-template-columns: 1fr 1fr 8fr;
   align-items: center;
   padding-bottom: 0.5em; }
+  .item .percent {
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 0 0.5rem 0; }
   .item .meter {
     background-color: grey;
     border-radius: 0.5em;
     height: 80%; }
     .item .meter .progress {
-      display: block;
+      display: flex;
       height: 100%;
       background-color: green;
       border-radius: 0.5em;
-      width: 24%; }
+      align-items: center;
+      padding-left: 1em;
+      font-family: sans-serif;
+      color: #f7f0f1;
+      font-weight: 700; }
 
 @media screen and (min-width: 700px) {
   #table {
