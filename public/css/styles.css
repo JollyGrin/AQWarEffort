@@ -22,3 +22,20 @@ body {
     margin: 0 0 24px;
     text-align: center;
     text-transform: uppercase; }
+
+#table {
+  display: grid;
+  grid-gap: 0.5em;
+  grid-template-columns: repeat(auto, min-max(300px, 1fr)); }
+  #table #table-ally {
+    background-color: #2ab7ca;
+    border-radius: 0.5em;
+    padding: 1em; }
+  #table #table-horde {
+    background-color: #fe4a49;
+    border-radius: 0.5em;
+    padding: 1em; }
+
+@media screen and (min-width: 700px) {
+  #table {
+    grid-template-columns: 1fr 1fr; } }

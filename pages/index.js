@@ -19,6 +19,16 @@ export default function Index({ gson, preview }) {
   return (
     <Layout>
       <Hero />
+      <section id='section-table'>
+        <div id='table'>
+          <div id='table-ally'>
+            <span>hi</span>
+          </div>
+          <div id='table-horde'>
+            <span>hi</span>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 }

@@ -1,4 +1,6 @@
 $color-light: #f7f0f1;
+$color-red: #fe4a49;
+$color-blue: #2ab7ca;
 
 body {
   background-color: $color-light;
@@ -31,8 +33,27 @@ body {
   }
 }
 
+#table {
+  display: grid;
+  grid-gap: 0.5em;
+  grid-template-columns: repeat(auto, min-max(300px, 1fr));
+  & #table-ally {
+    background-color: $color-blue;
+    border-radius: 0.5em;
+    padding: 1em;
+  }
+  & #table-horde {
+    background-color: $color-red;
+    border-radius: 0.5em;
+    padding: 1em;
+  }
+}
+
 // DESKTOP
 @media screen and (min-width: 700px) {
+  #table {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 // MOBILE
