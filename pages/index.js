@@ -5,8 +5,11 @@ import Layout from '../components/Layout';
 export default function Index({ gson, preview }) {
   return (
     <Layout>
-      <span>hello</span>
-      {console.log(gson)}
+      {gson.map((rec) => (
+        <div>
+          <p>{JSON.stringify(rec)}</p>
+        </div>
+      ))}
     </Layout>
   );
 }
