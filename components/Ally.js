@@ -10,6 +10,37 @@ export default class Ally extends Component {
     return (
       <Fragment>
         <Item
+          pic={'inv_ingot_02.jpg'}
+          id={2840}
+          total={this.props.table.total.copperBar}
+          current={this.props.table.current.copperBar}
+        />
+        <Item
+          pic={'inv_misc_leatherscrap_08.jpg'}
+          id={4304}
+          total={this.props.table.total.thickLeather}
+          current={this.props.table.current.thickLeather}
+        />
+        <Item
+          pic={'inv_misc_bandage_11.jpg'}
+          id={14529}
+          total={this.props.table.total.runeclothBandage}
+          current={this.props.table.current.runeclothBandage}
+        />
+        <Item
+          pic={'inv_misc_herb_17.jpg'}
+          id={8831}
+          total={this.props.table.total.purpleLotus}
+          current={this.props.table.current.purpleLotus}
+        />
+        <Item
+          pic={'inv_misc_fish_01.jpg'}
+          id={6887}
+          total={this.props.table.total.spottedYellowtail}
+          current={this.props.table.current.spottedYellowtail}
+        />
+        <hr />
+        <Item
           pic={'inv_misc_bandage_15.jpg'}
           id={1251}
           total={this.props.table.total.linenBandage}
@@ -20,12 +51,6 @@ export default class Ally extends Component {
           id={6450}
           total={this.props.table.total.silkBandage}
           current={this.props.table.current.silkBandage}
-        />
-        <Item
-          pic={'inv_misc_bandage_11.jpg'}
-          id={14529}
-          total={this.props.table.total.runeclothBandage}
-          current={this.props.table.current.runeclothBandage}
         />
         <Item
           pic={'inv_misc_fish_27.jpg'}
@@ -40,12 +65,6 @@ export default class Ally extends Component {
           current={this.props.table.current.roastRaptor}
         />
         <Item
-          pic={'inv_misc_fish_01.jpg'}
-          id={6887}
-          total={this.props.table.total.spottedYellowtail}
-          current={this.props.table.current.spottedYellowtail}
-        />
-        <Item
           pic={'inv_misc_herb_11.jpg'}
           id={3820}
           total={this.props.table.total.stranglekelp}
@@ -57,18 +76,7 @@ export default class Ally extends Component {
           total={this.props.table.total.arthasTear}
           current={this.props.table.current.arthasTear}
         />
-        <Item
-          pic={'inv_misc_herb_17.jpg'}
-          id={8831}
-          total={this.props.table.total.purpleLotus}
-          current={this.props.table.current.purpleLotus}
-        />
-        <Item
-          pic={'inv_ingot_02.jpg'}
-          id={2840}
-          total={this.props.table.total.copperBar}
-          current={this.props.table.current.copperBar}
-        />
+
         <Item
           pic={'inv_ingot_iron.jpg'}
           id={3575}
@@ -92,12 +100,6 @@ export default class Ally extends Component {
           id={2319}
           total={this.props.table.total.mediumLeather}
           current={this.props.table.current.mediumLeather}
-        />
-        <Item
-          pic={'inv_misc_leatherscrap_08.jpg'}
-          id={4304}
-          total={this.props.table.total.thickLeather}
-          current={this.props.table.current.thickLeather}
         />
       </Fragment>
     );
