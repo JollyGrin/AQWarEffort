@@ -1,0 +1,22 @@
+{
+  "name": "aq-war-effort-wowclassic",
+  "version": "1.0.0",
+  "description": "simple dashboard displaying daily progress of the war effort",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export -o docs",
+    "deploy": "npm run build && echo aqwareffort.com > docs/CNAME && git add -A && git commit -m 'update' && git push",
+    "css:build": "node-sass --omit-source-map-url assets/sass/styles.scss public/css/styles.css",
+    "css:watch": "npm run css:build -- --watch"
+  },
+  "author": "JollyGrin",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "next": "^9.4.4",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
