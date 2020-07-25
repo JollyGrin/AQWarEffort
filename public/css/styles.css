@@ -2,6 +2,9 @@ body {
   background-color: #f7f0f1;
   padding: 1em; }
 
+hr {
+  margin: 2em 0 2em; }
+
 #hero {
   display: flex;
   flex-direction: column;
