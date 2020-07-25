@@ -6,7 +6,7 @@ import Hero from '../components/Hero';
 import Ally from '../components/Ally';
 import Horde from '../components/Horde';
 
-export default function Index({ gson, preview }) {
+export default function Index({ gson, lastUpdate, preview }) {
   const table = {
     ally: {
       current: new Table(gson[1]),
@@ -20,7 +20,7 @@ export default function Index({ gson, preview }) {
 
   return (
     <Layout>
-      <Hero />
+      <Hero date={lastUpdate} />
       <section id='section-table'>
         <div id='table'>
           <div id='table-ally' className='tab'>
@@ -38,7 +38,9 @@ export default function Index({ gson, preview }) {
 export async function getStaticProps({ preview = false }) {
   const gson = await getData(process.env.URL);
 
+  const lastUpdate = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
+
   return {
-    props: { gson }, // will be passed to the page component as props
+    props: { gson, lastUpdate }, // will be passed to the page component as props
   };
 }

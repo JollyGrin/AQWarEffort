@@ -8,7 +8,8 @@ hr {
 #hero {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  padding-bottom: 2em; }
   #hero h1 {
     font-family: 'Raleway', sans-serif;
     font-size: 5rem;
@@ -25,6 +26,9 @@ hr {
     margin: 0 0 24px;
     text-align: center;
     text-transform: uppercase; }
+  #hero h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem; }
 
 #table {
   display: grid;
