@@ -8,6 +8,6 @@ Manage the AQ War Effort for your server by updating a google sheet. Redeploy th
 2. `npm i`
 3. Rename `.envTemplate` to `.env` and add the csv output of your google sheet
 
-![Video](https://i.imgur.com/zpuCysg.mp4)
+![](https://i.imgur.com/RoPTgcL.gif)
 
 4. Deploy the site `npm run deploy`
