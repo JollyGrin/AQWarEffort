@@ -6,10 +6,9 @@ export async function getData(sheetsURL) {
 
   const grab = await fetch(gson);
 
-  console.log('grab', grab);
-
   return grab.data;
   // return mock;
 }
 
+// old gson link
 // const gson = `https://gson.fayazara.now.sh?url=${sheetsURL}`;
