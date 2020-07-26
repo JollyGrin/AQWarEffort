@@ -31,6 +31,16 @@ export default function Index({ gson, lastUpdate, preview }) {
           </div>
         </div>
       </section>
+      <footer id='footer'>
+        <span>
+          Made with 🍻️ by Exa & Doyd <br />
+          of the Laughing Coffin
+        </span>
+        <span>
+          <i className='fab fa-github'></i>{' '}
+          <a href='https://github.com/JollyGrin/aqwareffort'>View Source</a>
+        </span>
+      </footer>
     </Layout>
   );
 }
