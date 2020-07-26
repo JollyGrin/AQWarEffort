@@ -23,7 +23,7 @@ export default class Item extends Component {
             ></img>
           </a>
           <span className='percent'>
-            {Math.floor((this.props.current / this.props.total) * 100)}%
+            {Math.floor((this.props.current / this.props.total) * 100)}
           </span>
           <div className='meter'>
             <span className='progress' style={styles.prog}>
