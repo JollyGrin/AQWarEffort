@@ -1,6 +1,7 @@
 $color-light: #f7f0f1;
 $color-red: #fe4a49;
 $color-blue: #2ab7ca;
+$color-green: #4bcc9d;
 
 body {
   background-color: $color-light;
@@ -72,23 +73,32 @@ hr {
     font-weight: 700;
     padding: 0 0.5rem 0;
   }
+}
 
-  & .meter {
-    background-color: grey;
-    border-radius: 0.5em;
-    height: 80%;
+.header-bar {
+  background-color: #e7b746;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  border-radius: 1em;
+}
 
-    & .progress {
-      display: flex;
-      height: 100%;
-      background-color: green;
-      border-radius: 0.5em;
-      align-items: center;
-      padding-left: 1em;
-      font-family: sans-serif;
-      color: $color-light;
-      font-weight: 700;
-    }
+.meter {
+  background-color: $color-light;
+  border-radius: 0.5em;
+  height: 80%;
+  -webkit-box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+
+  & .progress {
+    display: flex;
+    height: 100%;
+    background-color: $color-green;
+    border-radius: 0.5em 0 0 0.5em;
+    align-items: center;
+    padding-left: 1em;
+    font-family: sans-serif;
+    font-weight: 700;
   }
 }
 

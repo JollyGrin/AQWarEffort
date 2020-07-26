@@ -54,20 +54,29 @@ hr {
     font-size: 1.3rem;
     font-weight: 700;
     padding: 0 0.5rem 0; }
-  .item .meter {
-    background-color: grey;
-    border-radius: 0.5em;
-    height: 80%; }
-    .item .meter .progress {
-      display: flex;
-      height: 100%;
-      background-color: green;
-      border-radius: 0.5em;
-      align-items: center;
-      padding-left: 1em;
-      font-family: sans-serif;
-      color: #f7f0f1;
-      font-weight: 700; }
+
+.header-bar {
+  background-color: #e7b746;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  border-radius: 1em; }
+
+.meter {
+  background-color: #f7f0f1;
+  border-radius: 0.5em;
+  height: 80%;
+  -webkit-box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.5); }
+  .meter .progress {
+    display: flex;
+    height: 100%;
+    background-color: #4bcc9d;
+    border-radius: 0.5em 0 0 0.5em;
+    align-items: center;
+    padding-left: 1em;
+    font-family: sans-serif;
+    font-weight: 700; }
 
 #footer {
   font-family: sans-serif; }

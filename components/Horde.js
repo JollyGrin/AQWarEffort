@@ -10,6 +10,13 @@ export default class Horde extends Component {
     return (
       <Fragment>
         <Item
+          pic={'inv_bannerpvp_01.jpg'}
+          id={21438}
+          total={this.props.table.total.sumTotal}
+          current={this.props.table.current.sumTotal}
+        />
+        <hr />
+        <Item
           pic={'inv_ingot_02.jpg'}
           id={2840}
           total={this.props.table.total.copperBar}

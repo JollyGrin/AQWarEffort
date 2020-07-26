@@ -7,8 +7,24 @@ export default class Ally extends Component {
   }
 
   render() {
+    const styles = {
+      prog: {
+        width: `${Math.floor(
+          (this.props.table.current.sumTotal /
+            this.props.table.total.sumTotal) *
+            100
+        )}%`,
+      },
+    };
     return (
       <Fragment>
+        <Item
+          pic={'inv_bannerpvp_02.jpg'}
+          id={21436}
+          total={this.props.table.total.sumTotal}
+          current={this.props.table.current.sumTotal}
+        />
+        <hr />
         <Item
           pic={'inv_ingot_02.jpg'}
           id={2840}
@@ -76,7 +92,6 @@ export default class Ally extends Component {
           total={this.props.table.total.arthasTear}
           current={this.props.table.current.arthasTear}
         />
-
         <Item
           pic={'inv_ingot_iron.jpg'}
           id={3575}

@@ -5,6 +5,7 @@ import Table from '../assets/js/TableClass';
 import Hero from '../components/Hero';
 import Ally from '../components/Ally';
 import Horde from '../components/Horde';
+import Item from '../components/Item';
 
 export default function Index({ gson, lastUpdate, preview }) {
   const table = {
@@ -22,6 +23,15 @@ export default function Index({ gson, lastUpdate, preview }) {
     <Layout>
       <Hero date={lastUpdate} />
       <section id='section-table'>
+        <div className='header-bar'>
+          <Item
+            pic={'inv_misc_monsterhead_04.jpg'}
+            id={6657}
+            total={table.ally.total.sumTotal + table.horde.total.sumTotal}
+            current={table.ally.current.sumTotal + table.horde.current.sumTotal}
+          />
+        </div>
+
         <div id='table'>
           <div id='table-ally' className='tab'>
             <Ally table={table.ally} />
