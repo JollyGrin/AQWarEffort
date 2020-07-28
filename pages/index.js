@@ -58,8 +58,8 @@ export default function Index({ gson, lastUpdate, preview }) {
 export async function getStaticProps({ preview = false }) {
   const gson = await getData(process.env.URL);
 
-  const lastUpdate = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
-
+  // const lastUpdate = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
+  const lastUpdate = new Date().toLocaleString("en-US", {timeZone: "America/New_York"});
   return {
     props: { gson, lastUpdate }, // will be passed to the page component as props
   };
