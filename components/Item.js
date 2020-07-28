@@ -5,6 +5,12 @@ export default class Item extends Component {
     super(props);
   }
 
+  formatNumber = (rawNum) => {
+    return Number(parseFloat(rawNum).toFixed(0)).toLocaleString('en', {
+      minimumFractionDigits: 0,
+    });
+  };
+
   render() {
     const styles = {
       prog: {
@@ -27,7 +33,8 @@ export default class Item extends Component {
           </span>
           <div className='meter'>
             <span className='progress' style={styles.prog}>
-              {this.props.current} / {this.props.total}
+              {this.formatNumber(this.props.current)} /{' '}
+              {this.formatNumber(this.props.total)}
             </span>
           </div>
         </div>
