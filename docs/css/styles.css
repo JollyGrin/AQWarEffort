@@ -55,7 +55,7 @@ hr {
     font-family: sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
-    width: 2.5em;
+    width: 4ch;
     text-align: center; }
   .item .percent:after {
     content: '%';
