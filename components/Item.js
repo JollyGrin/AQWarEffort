@@ -14,7 +14,7 @@ export default class Item extends Component {
   render() {
     const styles = {
       prog: {
-        width: `${Math.floor((this.props.current / this.props.total) * 100)}%`,
+        flexBasis: `${Math.floor((this.props.current / this.props.total) * 100)}%`,
       },
     };
     return (
@@ -33,6 +33,8 @@ export default class Item extends Component {
           </span>
           <div className='meter'>
             <span className='progress' style={styles.prog}>
+            </span>
+            <span className='label'>
               {this.formatNumber(this.props.current)} /{' '}
               {this.formatNumber(this.props.total)}
             </span>

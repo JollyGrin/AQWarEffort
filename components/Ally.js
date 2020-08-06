@@ -9,7 +9,7 @@ export default class Ally extends Component {
   render() {
     const styles = {
       prog: {
-        width: `${Math.floor(
+        flexBasis: `${Math.floor(
           (this.props.table.current.sumTotal /
             this.props.table.total.sumTotal) *
             100
