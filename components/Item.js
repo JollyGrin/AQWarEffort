@@ -12,9 +12,14 @@ export default class Item extends Component {
   };
 
   render() {
+    const percentInt = Math.floor((this.props.current / this.props.total) * 100)
     const styles = {
       prog: {
-        width: `${Math.floor((this.props.current / this.props.total) * 100)}%`,
+        width: `${percentInt}%`,
+      },
+      complete: {
+        width: 'auto',
+        borderRadius: '0.5em',
       },
     };
     return (
@@ -29,13 +34,20 @@ export default class Item extends Component {
             ></img>
           </a>
           <span className='percent'>
-            {Math.floor((this.props.current / this.props.total) * 100)}
+            {percentInt}
           </span>
           <div className='meter'>
+            {percentInt === 100 ? (
+            <span className='progress' style={styles.complete}>
+              {this.formatNumber(this.props.current)} /{' '}
+              {this.formatNumber(this.props.total)}
+            </span>
+            ) : (
             <span className='progress' style={styles.prog}>
               {this.formatNumber(this.props.current)} /{' '}
               {this.formatNumber(this.props.total)}
             </span>
+            )}
           </div>
         </div>
       </Fragment>
