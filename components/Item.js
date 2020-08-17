@@ -14,7 +14,7 @@ export default class Item extends Component {
   render() {
     const styles = {
       prog: {
-        width: `${Math.floor((this.props.current / this.props.total) * 100)}%`,
+        width: `${Math.floor(((this.props.current / this.props.total) * 100) - 3)}%`,
       },
     };
     return (
