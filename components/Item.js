@@ -14,8 +14,21 @@ export default class Item extends Component {
   render() {
     const styles = {
       prog: {
-        width: `${Math.floor(((this.props.current / this.props.total) * 100) - 3)}%`,
+        width: `${Math.floor(
+          (this.props.current / this.props.total) * 100 - 3
+        )}%`,
       },
+      full: {
+        width: `98%`,
+      },
+    };
+
+    const isFull = (current, total) => {
+      if (current / total === 1) {
+        return styles.full;
+      } else {
+        return styles.prog;
+      }
     };
     return (
       <Fragment>
@@ -32,7 +45,10 @@ export default class Item extends Component {
             {Math.floor((this.props.current / this.props.total) * 100)}
           </span>
           <div className='meter'>
-            <span className='progress' style={styles.prog}>
+            <span
+              className='progress'
+              style={isFull(this.props.current, this.props.total)}
+            >
               {this.formatNumber(this.props.current)} /{' '}
               {this.formatNumber(this.props.total)}
             </span>
